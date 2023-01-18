@@ -1,4 +1,4 @@
-# selenium 4
+                # selenium 4
 from multiprocessing.connection import wait
 from pickletools import uint8
 from selenium import webdriver
@@ -29,8 +29,8 @@ def generatePassword():
 	return pwd
 
 def parseResultPage(src):
-	initInd1 = src.index("<td id=\"resultsCol\">")
-	src = src[initInd1::]
+#	initInd1 = src.index("<td id=\"resultsCol\">")
+#	src = src[initInd1::]
 	initInd2 = src.index('mosaic-zone')
 	newSrc = src[initInd2::]
 	fullList = []
@@ -73,10 +73,11 @@ def getLinks(query, limit):
 	salary = "%2485%2C000" 
 	remote = "&sc=0kf%3Aattr%28DSQF7%29%3B"
 	dateSort = "&sort=date"
+	fromEmploy = "&sc=0bf%3Aexrec%28%29%3B"
 	twoWeeks = "&fromage=14"
 #	extra_stuff = "&sc=0kf%3Aattr%28DSQF7%29%3B&sort=date"
 #	extra_stuff = salary + remote + dateSort + twoWeeks
-	extra_stuff = remote + dateSort + twoWeeks
+	extra_stuff = remote + dateSort + fromEmploy
 	startCount = 0
 	fullList = []
 	while startCount < limit:
